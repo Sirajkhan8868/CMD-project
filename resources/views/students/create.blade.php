@@ -32,6 +32,10 @@
             <input type="text" name="contact" class="form-control" required>
         </div>
         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
             <label for="guardian_id">Guardian</label>
             <select name="guardian_id" class="form-control" required>
                 @foreach($guardians as $guardian)
@@ -46,6 +50,10 @@
                     <option value="{{ $studentClass->id }}">{{ $studentClass->class_name }} - {{ $studentClass->section }}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="form-group">
+            <label for="enrollment_date">Enrollment Date</label>
+            <input type="date" name="enrollment_date" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success mt-2">Save Student</button>
     </form>

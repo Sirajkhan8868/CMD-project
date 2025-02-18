@@ -4,10 +4,10 @@
 <div class="container">
     <h1>Enrollment Records</h1>
     <a href="{{ route('enrollments.create') }}" class="btn btn-primary mb-3">Enroll New Student</a>
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Student</th>
                 <th>Course</th>
                 <th>Enrollment Date</th>

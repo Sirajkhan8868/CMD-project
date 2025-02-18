@@ -4,10 +4,10 @@
 <div class="container">
     <h1>Student Class Records</h1>
     <a href="{{ route('student_classes.create') }}" class="btn btn-primary mb-3">Add New Class</a>
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Class Name</th>
                 <th>Section</th>
                 <th>Teacher</th>

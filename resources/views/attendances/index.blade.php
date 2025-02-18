@@ -6,10 +6,10 @@
 
         <a href="{{ route('attendances.create') }}" class="btn btn-primary mb-3">Add New Attendance</a>
 
-        <table class="table table-bordered">
+        <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Student</th>
                     <th>Class</th>
                     <th>Date</th>

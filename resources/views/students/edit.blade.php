@@ -48,6 +48,10 @@
                 @endforeach
             </select>
         </div>
+        <div class="form-group">
+            <label for="enrollment_date">Enrollment Date</label>
+            <input type="date" name="enrollment_date" value="{{ $student->enrollment_date }}" class="form-control" required>
+        </div>
         <button type="submit" class="btn btn-warning mt-2">Update Student</button>
     </form>
 @endsection

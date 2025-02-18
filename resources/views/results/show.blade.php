@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Result Details</h1>
 
-    <table class="table">
+    <table class="table table-hover">
         <tr>
             <th>Student</th>
             <td>{{ $result->student->first_name }} {{ $result->student->last_name }}</td>

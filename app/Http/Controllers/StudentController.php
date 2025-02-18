@@ -31,8 +31,10 @@ class StudentController extends Controller
             'gender' => 'required',
             'address' => 'required',
             'contact' => 'required',
+            'email' => 'required|email',
             'guardian_id' => 'required|exists:guardians,id',
             'student_class_id' => 'required|exists:student_classes,id',
+            'enrollment_date' => 'required|date',
         ]);
 
         Student::create($request->all());
@@ -63,8 +65,10 @@ class StudentController extends Controller
             'gender' => 'required',
             'address' => 'required',
             'contact' => 'required',
+            'email' => 'required|email',
             'guardian_id' => 'required|exists:guardians,id',
             'student_class_id' => 'required|exists:student_classes,id',
+            'enrollment_date' => 'required|date',
         ]);
 
         $student = Student::findOrFail($id);

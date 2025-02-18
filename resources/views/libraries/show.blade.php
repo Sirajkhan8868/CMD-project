@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Library Book Details</h1>
 
-    <table class="table">
+    <table class="table table-hover">
         <tr>
             <th>Title</th>
             <td>{{ $library->title }}</td>

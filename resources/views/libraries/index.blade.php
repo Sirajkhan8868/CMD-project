@@ -1,4 +1,3 @@
-<!-- resources/views/libraries/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -6,7 +5,7 @@
     <h1>Library</h1>
     <a href="{{ route('libraries.create') }}" class="btn btn-primary mb-3">Add Book</a>
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Title</th>

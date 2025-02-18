@@ -4,10 +4,10 @@
 <div class="container">
     <h1>Fee Records</h1>
     <a href="{{ route('fees.create') }}" class="btn btn-primary mb-3">Add Fee Payment</a>
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Student</th>
                 <th>Amount</th>
                 <th>Payment Date</th>

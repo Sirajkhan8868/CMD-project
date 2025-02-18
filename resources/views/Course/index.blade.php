@@ -6,10 +6,10 @@
 
         <a href="{{ route('courses.create') }}" class="btn btn-primary mb-3">Add New Course</a>
 
-        <table class="table table-bordered">
+        <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Course Name</th>
                     <th>Course Code</th>
                     <th>Teacher</th>

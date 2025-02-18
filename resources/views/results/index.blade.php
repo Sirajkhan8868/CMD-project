@@ -5,7 +5,7 @@
     <h1>Results</h1>
     <a href="{{ route('results.create') }}" class="btn btn-primary mb-3">Add Result</a>
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Student</th>
