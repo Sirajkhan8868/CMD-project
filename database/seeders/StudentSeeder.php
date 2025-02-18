@@ -14,29 +14,23 @@ class StudentSeeder extends Seeder
         $guardian = Guardian::first();
         $studentClass = StudentClass::first();
 
-        Student::create([
-            'first_name' => 'Alex',
-            'last_name' => 'Smith',
-            'date_of_birth' => '2005-04-15',
-            'gender' => 'Male',
-            'address' => '456 Elm St',
-            'contact' => '555-9876',
-            'email' => 'alex@gmail.com',
-            'enrollment_date' => '2023-02-16',
-            'guardian_id' => $guardian->id,
-            'student_class_id' => $studentClass->id,
-        ]);
-        Student::create([
-            'first_name' => 'kamran',
-            'last_name' => 'khan',
-            'date_of_birth' => '2002-04-15',
-            'gender' => 'Male',
-            'address' => 'Haripur',
-            'contact' => '554-9876',
-            'email' => 'alex@gmail.com',
-            'enrollment_date' => '2023-02-17',
-            'guardian_id' => $guardian->id,
-            'student_class_id' => $studentClass->id,
-        ]);
+        if (!$guardian || !$studentClass) {
+            return;
+        }
+
+        Student::updateOrCreate(
+            ['email' => 'kami@gmail.com'],
+            [
+                'first_name' => 'kami',
+                'last_name' => 'khan',
+                'date_of_birth' => '2005-04-15',
+                'gender' => 'Male',
+                'address' => '456 Eln St',
+                'contact' => '555-9887',
+                'enrollment_date' => '2023-02-20',
+                'guardian_id' => $guardian->id,
+                'student_class_id' => $studentClass->id,
+            ]
+        );
     }
 }

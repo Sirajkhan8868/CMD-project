@@ -14,7 +14,7 @@ class DepartmentSeeder extends Seeder
         ]);
 
         Department::create([
-            'name' => 'Mathematics',
+            'name' => 'Chemistry',
         ]);
     }
 }

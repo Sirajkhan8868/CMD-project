@@ -17,7 +17,7 @@ class EnrollmentSeeder extends Seeder
         Enrollment::create([
             'student_id' => $student->id,
             'course_id' => $course->id,
-            'enrollment_date' => '2023-02-16',
+            'enrollment_date' => '2021-02-16',
         ]);
     }
 }

@@ -13,8 +13,8 @@ class StudentClassSeeder extends Seeder
         $teacher = Teacher::first();
 
         StudentClass::create([
-            'class_name' => 'Class 10',
-            'section' => 'A',
+            'class_name' => 'Class 8',
+            'section' => 'C',
             'teacher_id' => $teacher->id,
         ]);
     }

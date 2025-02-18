@@ -44,5 +44,7 @@ Route::resource('guardians', GuardianController::class);
 Route::resource('libraries', LibraryController::class);
 Route::resource('results', ResultController::class);
 Route::resource('students', StudentController::class);
-Route::resource('student-classes', StudentClassController::class);
+Route::resource('student_classes', StudentClassController::class);
 Route::resource('teachers', TeacherController::class);
+Route::resource('library', LibraryController::class);
+

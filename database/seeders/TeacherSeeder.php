@@ -13,9 +13,9 @@ class TeacherSeeder extends Seeder
         $department = Department::first();
 
             Teacher::create([
-                'first_name' => 'John',
+                'first_name' => 'ali',
                 'last_name' => 'Doe',
-                'email' => 'irman@example.com',
+                'email' => 'ali@example.com',
                 'address' => '123 Main St',
                 'contact' => '555-1234',
                 'hire_date' => '2020-01-01',

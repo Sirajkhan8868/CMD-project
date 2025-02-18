@@ -17,7 +17,7 @@ class ResultSeeder extends Seeder
         Result::create([
             'student_id' => $student->id,
             'exam_id' => $exam->id,
-            'marks_obtained' => 80,
+            'marks_obtained' => 60,
             'grade' => 'B'
         ]);
     }

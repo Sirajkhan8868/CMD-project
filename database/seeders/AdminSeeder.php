@@ -10,7 +10,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         Admin::firstOrCreate(
-            ['username' => 'admin'],
+            ['username' => 'superadmin'],
             [
                 'password' => bcrypt('admin123'),
                 'role' => 'superadmin'
