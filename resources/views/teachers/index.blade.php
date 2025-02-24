@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Teachers List</h1>
+<h1 class="text-center">Teachers List</h1>
 <a href="{{ route('teachers.create') }}" class="btn btn-primary mb-3">Add New Teacher</a>
 
 @if(session('success'))

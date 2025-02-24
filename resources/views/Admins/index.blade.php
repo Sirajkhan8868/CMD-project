@@ -3,7 +3,7 @@
 @section('content')
 <div>
 
-<h1>Admins</h1>
+<h1 class="text-center">Admins</h1>
 <a href="{{ route('admins.create') }}" class="btn btn-primary">Add Admin</a>
 <table class="table">
     <thead>

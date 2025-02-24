@@ -7,14 +7,20 @@
         <form action="{{ route('courses.update', $course->id) }}" method="POST">
             @csrf
             @method('PUT')
+
             <div class="form-group">
                 <label for="course_name">Course Name</label>
-                <input type="text" name="course_name" id="course_name" class="form-control" value="{{ $course->course_name }}" required>
+                <input type="text" name="course_name" id="course_name" class="form-control" value="{{ old('course_name', $course->course_name) }}" required>
             </div>
 
             <div class="form-group">
                 <label for="course_code">Course Code</label>
-                <input type="text" name="course_code" id="course_code" class="form-control" value="{{ $course->course_code }}" required>
+                <input type="text" name="course_code" id="course_code" class="form-control" value="{{ old('course_code', $course->course_code) }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" class="form-control" rows="4" required>{{ old('description', $course->description) }}</textarea>
             </div>
 
             <div class="form-group">
@@ -30,7 +36,7 @@
 
             <div class="form-group">
                 <label for="credits">Credits</label>
-                <input type="number" name="credits" id="credits" class="form-control" value="{{ $course->credits }}" required>
+                <input type="number" name="credits" id="credits" class="form-control" value="{{ old('credits', $course->credits) }}" required>
             </div>
 
             <button type="submit" class="btn btn-success mt-3">Update Course</button>

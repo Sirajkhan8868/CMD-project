@@ -77,6 +77,7 @@
             @yield('content')
         </div>
     </div>
+</div>
 
     <footer>
         <p>&copy; {{ date('Y') }} School Management System. All Rights Reserved.</p>

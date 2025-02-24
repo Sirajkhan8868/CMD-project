@@ -4,7 +4,6 @@
     <div class="container mt-4">
         <h1 class="mb-4 text-center">Student Details</h1>
 
-        <div class="card shadow-sm">
             <div class="card-header bg-primary text-white text-start">
                 Student: {{ $student->first_name }} {{ $student->last_name }}
             </div>
@@ -61,6 +60,5 @@
                     <i class="bi bi-arrow-left"></i> Back to List
                 </a>
             </div>
-        </div>
     </div>
 @endsection

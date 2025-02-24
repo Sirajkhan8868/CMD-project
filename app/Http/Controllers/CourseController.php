@@ -26,10 +26,19 @@ class CourseController extends Controller
             'course_name' => 'required',
             'course_code' => 'required',
             'teacher_id' => 'required|exists:teachers,id',
+            'description' => 'nullable',
+            'credits' => 'required|integer|min:1',
         ]);
 
-        Course::create($request->all());
-        return redirect()->route('courses.index');
+        Course::create([
+            'course_name' => $request->course_name,
+            'course_code' => $request->course_code,
+            'teacher_id' => $request->teacher_id,
+            'description' => $request->description,
+            'credits' => $request->credits,
+        ]);
+
+        return redirect()->route('courses.index')->with('success', 'Course created successfully!');
     }
 
     public function show($id)
@@ -51,16 +60,25 @@ class CourseController extends Controller
             'course_name' => 'required',
             'course_code' => 'required',
             'teacher_id' => 'required|exists:teachers,id',
+            'description' => 'nullable',
+            'credits' => 'required|integer|min:1',
         ]);
 
         $course = Course::findOrFail($id);
-        $course->update($request->all());
-        return redirect()->route('courses.index');
+        $course->update([
+            'course_name' => $request->course_name,
+            'course_code' => $request->course_code,
+            'teacher_id' => $request->teacher_id,
+            'description' => $request->description ?? 'No description provided',
+            'credits' => $request->credits,
+        ]);
+
+        return redirect()->route('courses.index')->with('success', 'Course updated successfully!');
     }
 
     public function destroy($id)
     {
         Course::destroy($id);
-        return redirect()->route('courses.index');
+        return redirect()->route('courses.index')->with('success', 'Course deleted successfully!');
     }
 }

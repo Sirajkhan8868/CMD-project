@@ -23,9 +23,16 @@ class ExamController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'exam_name' => 'required|string|max:255',
+            'course_id' => 'required|exists:courses,id',
+        ]);
+
         Exam::create($request->all());
-        return redirect()->route('exams.index');
+
+        return redirect()->route('exams.index')->with('success', 'Exam created successfully!');
     }
+
 
     public function show(Exam $exam)
     {

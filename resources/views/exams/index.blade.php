@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Exam Records</h1>
+    <h1 class="text-center">Exam Records</h1>
     <a href="{{ route('exams.create') }}" class="btn btn-primary mb-3">Add New Exam</a>
     <table class="table table-hover">
         <thead>

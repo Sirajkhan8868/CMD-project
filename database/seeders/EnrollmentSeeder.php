@@ -14,10 +14,17 @@ class EnrollmentSeeder extends Seeder
         $student = Student::first();
         $course = Course::first();
 
+        if (!$student || !$course) {
+            $this->command->warn("No students or courses found. Please seed the students and courses tables first.");
+            return;
+        }
+
         Enrollment::create([
             'student_id' => $student->id,
             'course_id' => $course->id,
-            'enrollment_date' => '2021-02-16',
+            'enrollment_date' => now()->toDateString(),
         ]);
+
+        $this->command->info("Enrollment created successfully!");
     }
 }

@@ -33,6 +33,10 @@
             <input type="text" name="contact" value="{{ $student->contact }}" class="form-control" required>
         </div>
         <div class="form-group">
+            <label for="contact">Email</label>
+            <input type="text" name="email" value="{{ $student->email }}" class="form-control" required>
+        </div>
+        <div class="form-group">
             <label for="guardian_id">Guardian</label>
             <select name="guardian_id" class="form-control" required>
                 @foreach($guardians as $guardian)
@@ -40,6 +44,7 @@
                 @endforeach
             </select>
         </div>
+
         <div class="form-group">
             <label for="student_class_id">Class</label>
             <select name="student_class_id" class="form-control" required>

@@ -17,6 +17,11 @@
             </div>
 
             <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" class="form-control" required>
+            </div>
+
+            <div class="form-group">
                 <label for="teacher_id">Teacher</label>
                 <select name="teacher_id" id="teacher_id" class="form-control" required>
                     <option value="">Select Teacher</option>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="mb-4">Attendance Records</h1>
+        <h1 class="mb-4 text-center">Attendance Records</h1>
 
         <a href="{{ route('attendances.create') }}" class="btn btn-primary mb-3">Add New Attendance</a>
 

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Library</h1>
+    <h1 class="text-center">Library</h1>
     <a href="{{ route('libraries.create') }}" class="btn btn-primary mb-3">Add Book</a>
 
     <table class="table table-hover">
